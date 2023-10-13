@@ -17,7 +17,10 @@ var db *sql.DB
 func main() {
 	// Configura la conexión a la base de datos MySQL.
 	var err error
-	db, err = sql.Open("mysql", "root:Javier1234567890$@tcp(localhost:3306)/Heladeria")
+	db, err = sql.Open("mysql", "root:Javier1234567890@tcp(heladeriago_mysql_1:3306)/Heladeria")
+
+	//db, err = sql.Open("mysql", "root:Javier1234567890$@tcp(localhost:3306)/Heladeria")
+	//db, err = sql.Open("mysql", "root:Javier1234567890$@tcp(mysql-container:3306)/Heladeria")
 	if err != nil {
 		log.Fatal(err)
 	}

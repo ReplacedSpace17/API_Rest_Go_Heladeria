@@ -1,0 +1,11 @@
+# Utiliza una imagen base de MySQL
+FROM mysql:latest
+
+# Establece las variables de entorno para la configuración de MySQL
+ENV MYSQL_ROOT_PASSWORD=Javier1234567890
+ENV MYSQL_DATABASE=Heladeria
+
+# Copia un script SQL de inicio (opcional, para inicializar la base de datos)
+COPY init.sql /docker-entrypoint-initdb.d/
+
+#docker exec -it heladeriago_mysql_1 bash
